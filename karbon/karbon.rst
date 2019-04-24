@@ -76,7 +76,7 @@ It is **highly recommended** that you connect to the Tools VM using the Microsof
 Creating a Karbon Cluster
 +++++++++++++++++++++++++
 
-In this exercise you will create a production ready Kubernetes cluster with Nutanix Karbon.
+In this exercise you will create a production-ready Kubernetes cluster with Nutanix Karbon.
 
 #. In **Prism Central**, select :fa:`bars` **> Services > Karbon**.
 
@@ -148,7 +148,7 @@ In this exercise you will create a production ready Kubernetes cluster with Nuta
    - **Storage Class Name** - default-storageclass-*Initials* (initials in lowercase)
    - **Prism Element Cluster** - *Your Nutanix Cluster IP*
    - **Nutanix Cluster Username** - admin
-   - **Nutanix Cluster Password** - *Your Nutanix Cluster Password*
+   - **Nutanix Cluster Password** - h0LN3xt2019?
    - **Reclaim Policy** - Delete (Default)
    - **Storage Container Name** - Default
    - **File System** - ext4 (Default)
@@ -249,7 +249,9 @@ Now that you have successfully run commands against your Kubernetes cluster usin
    - https://raw.githubusercontent.com/nutanixworkshops/ts2019/master/karbon/mysql-deployment.yaml
    - https://raw.githubusercontent.com/nutanixworkshops/ts2019/master/karbon/wordpress-deployment.yaml
 
-.. note::
+   Kubernetes depends on YAML files to provision applications and define dependencies. YAML files are a human-readable text-based format for specifying configuration information. This application requires two YAML files to be stored in the **wordpress** directory.
+
+  .. note::
 
   If attempting to download the script results in an Access Denied error, log out of any AWS accounts from your browser or open the download link in **Incognito (Private Browsing)** mode.
 
@@ -377,7 +379,7 @@ You have confirmed the Wordpress application and its MySQL database are running.
 Exploring Logging & Visualization
 +++++++++++++++++++++++++++++++++
 
-Karbon provides a plug-in architecture to continually add additional functionality on top of vanilla Kubernetes. The firdst plug-in Karbon will provide is an integrated logging services stack called **EFK**, short for `Elasticsearch <https://github.com/elastic/elasticsearch>`_, `fluentd <https://www.fluentd.org/>`_ and `Kibana <https://github.com/elastic/kibana>`_.
+Karbon provides a plug-in architecture to continually add additional functionality on top of vanilla Kubernetes. The firsts plug-ins Karbon provides are an integrated logging services stack called **EFK**, short for `Elasticsearch <https://github.com/elastic/elasticsearch>`_, `fluentd <https://www.fluentd.org/>`_ and `Kibana <https://github.com/elastic/kibana>`_; and monitoring and alerting with Prometheus.
 
 Elasticsearch is a real-time, distributed, and scalable search engine which allows for full-text and structured search, as well as analytics. It is commonly used to index and search through large volumes of log data, but can also be used to search many different kinds of documents.
 
@@ -411,28 +413,8 @@ Fluentd is a popular data collector that runs on all Kubernetes nodes to tail co
 
    Advanced Kibana usage, including time series data visualization that can answer questions such as "What is the difference in service error rates between our last 3 application upgrades," is covered in the `Kibana User Guide <https://www.elastic.co/guide/en/kibana/6.2/index.html>`_.
 
-Karbon 1.0
-++++++++++
-
-Karbon 1.0 features and functionality include:
-
-- Pre-configured Production and Dev/Test cluster profiles to further simplify provisioning
-
-- Multi-Master VM support to provide an HA Kubernetes control plane
-
-  - Active/passive Multi-Master HA out of the box
-
-  - Support for 3rd party load balancers
-
-- The ability to add/remove worker node(s) to deployed clusters
-
-- Cluster level monitoring & alerting using `Prometheus <https://prometheus.io/docs/introduction/overview/>`_, an open-source systems monitoring and alerting system with an embedded time-series database originally developed by SoundCloud.
-
-- New Nutanix Container Storage Interface (CSI) Driver Support
-
-  - `CSI <https://kubernetes-csi.github.io/docs/>`_ is the standard for exposing arbitrary block and file storage storage systems to Kubernetes
-
-  - Support for Nutanix Volumes and Nutanix Files
+Coming Soon!
+++++++++++++
 
 - Upgrades & Patching
 
@@ -441,8 +423,6 @@ Karbon 1.0 features and functionality include:
   - Immutable OS upgrades of all cluster nodes
 
 - Support for native `Kubernetes RBAC <https://kubernetes.io/docs/reference/access-authn-authz/rbac/>`_
-
-- Rotating 24-hour key-based access to cluster to minimize malicious activity
 
 - Darksite Support
 
@@ -463,7 +443,7 @@ What are the key things you should know about **Nutanix Karbon**?
 
 - Karbon can provide additional functionality to Kubernetes over time through its plugin architecture.
 
-- Karbon will be a certified Kubernetes distribution and has passed the `Kuberentes Conformance Certification <https://landscape.cncf.io/landscape=certified-kubernetes-hosted&selected=nutanix-karbon>`_.
+- Karbon is a certified Kubernetes distribution and has passed the `Kuberentes Conformance Certification <https://landscape.cncf.io/landscape=certified-kubernetes-hosted&selected=nutanix-karbon>`_.
 
 - Karbon is listed on the official `Kubernetes Solutions <https://kubernetes.io/docs/setup/pick-right-solution/>`_ and `Cloud Native Computing Foundation Landscape <https://landscape.cncf.io/category=certified-kubernetes-hosted&selected=nutanix-karbon>`_ pages.
 
