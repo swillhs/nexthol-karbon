@@ -158,7 +158,7 @@ In this exercise you will create a production-ready Kubernetes cluster with Nuta
    - **Storage Class Name** - default-storageclass-*Initials* (initials in lowercase)
    - **Prism Element Cluster** - *Your Nutanix Cluster IP*
    - **Nutanix Cluster Username** - admin
-   - **Nutanix Cluster Password** - h0LN3xt2019?
+   - **Nutanix Cluster Password** - *Your Nutanix Cluster Password*
    - **Reclaim Policy** - Delete (Default)
    - **Storage Container Name** - Default
    - **File System** - ext4 (Default)
@@ -375,7 +375,7 @@ You have confirmed the Wordpress application and its MySQL database are running.
 
    - **Site Title** - *Initials*\ 's Karbon Blog
    - **Username** - admin
-   - **Password** - h0LN3xt2019?
+   - **Password** - Nut@nixLabs19
    - **Your Email** - noreply@nutanix.com
 
 #. Click **Install Wordpress**.
