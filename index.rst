@@ -312,9 +312,9 @@ Now that you have successfully run commands against your Kubernetes cluster usin
 
    .. code-block:: bash
 
-   	kubectl create -f mysql-deployment.yaml
+   	kubectl create -f mysql-deployment.yaml.txt
 
-   .. figure:: images/15.png
+   .. figure:: images/karbon_deploy_application_31.png
 
 #. In addition to the MySQL service, the **mysql-deployment.yaml** also specifies that a persistent volume be created as part of the deployment. You can get additional details about the volume by running:
 
@@ -338,7 +338,7 @@ Now that you have successfully run commands against your Kubernetes cluster usin
 
    .. code-block:: bash
 
-   	kubectl create -f wordpress-deployment.yaml
+   	kubectl create -f wordpress-deployment.yaml.txt
 
 #. Verify both pods are displayed as **Running** using ``kubectl get pods``.
 
